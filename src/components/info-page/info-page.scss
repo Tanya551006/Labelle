@@ -1,0 +1,73 @@
+.info-page {
+    color: $defaultFontColor;
+    font-size: 16px;
+
+    p {
+        margin-bottom: 20px;
+
+        b {
+            font-weight: 700;
+        }
+    }
+}
+
+.delivery {
+    &__table {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 7fr 3fr;
+        padding: 5px 0;
+
+        &:nth-child(odd) {
+            background-color: $tableBgColor;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        h3 {
+            width: 100%;
+        }
+    }
+
+    &__input {
+        width: 100%;
+
+        &--bin {
+            max-width: 110px;
+        }
+
+        &--land {
+            max-width: 250px;
+            margin-right: 20px;
+        }
+    }
+
+    &__submit-btn {
+        margin-left: auto;
+        border: 1px solid $formBtnColor;
+        padding: 12px 16px;
+        font-size: 20px;
+        color: $infoBtnColor;
+        line-height: 1.3333333;
+        font-weight: 700;
+        border-radius: 1px;
+
+        &:hover {
+            background-color: $formBtnColor;
+        }
+    }
+
+    &__form-title {
+        font-size: 22px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+}

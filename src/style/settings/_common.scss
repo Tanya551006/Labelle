@@ -218,6 +218,9 @@ h3 {
 
     &--info {
         font-size: 66px;
+		color: $titleColor;
+		text-align: center;
+		margin-bottom: 60px;
     }
 
     &--form {
@@ -238,3 +241,4 @@ h3 {
 		text-decoration: underline;
 	}
 }
+

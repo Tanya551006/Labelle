@@ -1,0 +1,102 @@
+.info-product {
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: $descriotionBgColor;
+        color: $primaryColor;
+        padding: 10px 25px;
+
+        @media (max-width: 757px) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        min-width: 185px;
+        padding: 0 10px 5px;
+    }
+
+    &__img {
+        min-height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    &__btn {
+        text-transform: uppercase;
+    }
+
+    &__block {
+        color: $darkColor;
+        font-size: 17px;
+        font-weight: 400;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 20px;
+
+        @media (max-width: 1023px) {
+            grid-template-columns: 5fr 4fr;
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+    }
+
+    &__desctiption-subtitle {
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    &__desctiption-block {
+        margin-bottom: 30px;
+    }
+
+    &__desctiption-text {
+        margin-bottom: 5px;
+    }
+
+    &__description-care {
+        margin: 50px 0 20px;
+    }
+
+    &__attributes-item {
+        color: $defaultFontColor;
+        padding: 10px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        border-top: 1px solid $inputBorderColor;
+
+        &:last-child {
+            border-bottom: 1px solid $inputBorderColor;
+        }
+    }
+
+    &__attributes-name {
+        font-weight: 700;
+
+    }
+
+    &__attributes-value {
+
+        &--underline {
+            text-decoration: underline;
+        }
+        a {
+            color: $primaryColor;
+
+            &:hover {
+                transition: opacity .3s ease-in-out;
+                opacity: .7;
+            }
+        }
+    }
+}
