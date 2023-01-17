@@ -1,0 +1,223 @@
+.card {
+    transition: .3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $whiteColor;
+    z-index: 1;
+
+    &--item {
+        &:hover {
+            z-index: 2;
+            box-shadow: $cardHoverShadow;
+
+            @media (min-width: 768px) {
+                .card {
+                    &__hover-info-block {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    &--slide {
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        }
+    }
+
+    &__slide-wrap {
+        padding: 10px;
+
+        &:not(.slick-slide) {
+            max-width: 300px;
+        }
+    }
+
+    &__label {
+        font-size: 15px;
+        font-weight: 700;
+        color: $whiteColor;
+        position: absolute;
+        padding: 6px;
+
+        &--info-text {
+            left: 0;
+            top: 15px;
+
+            &[data-type="special-offer"] {
+                background: $cardLabelSpecOfferColor;
+            }
+
+            &[data-type="novelty"] {
+                background: $cardLabelNoveltyColor;
+            }
+        }
+
+        &--discount {
+            right: 0;
+            top: 15px;
+            background: $cardLabel;
+        }
+    }
+
+    &__img-wrapper {
+        position: relative;
+        font-size: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__name {
+        color: $titleColor;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__price-field {
+        font-size: 16px;
+        margin-bottom: 5px;
+        text-align: center;
+        color: $goodsTextColor;
+
+        .amount {
+            font-size: 20px;
+        }
+    }
+
+    &__note {
+        color: $goodsTextColor;
+        text-align: center;
+        line-height: calc(18/12);
+        font-size: 12px;
+    }
+
+    &__like-btn {
+        position: absolute;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        svg {
+            transition: .3s ease;
+            fill: $cardSelectItemEmpty;
+        }
+
+        &:hover {
+            svg {
+                fill: $primaryColor;
+            }
+        }
+    }
+
+    &__name-block {
+        margin-bottom: 10px;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    &__text-block {
+        padding: 30px 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__choosen-block {
+        background: $warnBlueBgColor;
+        color: $cardChoosenTextColor;
+        padding: 15px;
+        text-align: center;
+    }
+
+    &__hover-info-block {
+        padding-top: 10px;
+        display: none;
+    }
+
+    &__stars {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    &__star-item {
+        margin: 0 2px;
+        fill: $primaryColor;
+    }
+    &__count-field {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__count-input {
+        font-size: 22px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+
+    &__submit-btn {
+        width: 100%;
+    }
+
+    &__count-btn {
+        cursor: pointer;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        position: relative;
+        border: 1px solid $cardSelectItemEmpty;
+        transition: .3s ease;
+        opacity: .5;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::before {
+            content: '';
+            width: 16px;
+            height: 1px;
+            background: $defaultFontColor;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &--plus {
+            &::after {
+                content: '';
+                height: 16px;
+                width: 1px;
+                background: $defaultFontColor;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &__notice {
+        font-size: 15px;
+        color: $defaultFontColor;
+        text-align: center;
+    }
+}

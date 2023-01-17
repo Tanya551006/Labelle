@@ -1,0 +1,121 @@
+.goods-row {
+    &__catalogue {
+        display: flex;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--name-side {
+            padding: 0 20px;
+        }
+
+        &--order-side {
+            align-items: flex-end;
+        }
+    }
+
+
+    &__title {
+
+        a {
+            font-size: 24px;
+            color: $defaultFontColor ;
+
+            &:hover {
+                transition: opacity .3s ease-in-out;
+                opacity: .7;
+            }
+        }
+    }
+
+    &__articles {
+        margin-top: auto;
+        color: $goodsTextColor;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    &__info {
+        margin-top: 25px;
+    }
+
+    &__code {
+        display: flex;
+        color: $goodsTextColor;
+        font-size: 15px;
+    }
+
+    &__code-name {
+        width: 200px;
+        font-weight: 700;
+    }
+
+    &__code-value {
+
+    }
+
+    &__price-block {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__count-field {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__price-field {
+        font-size: 30px;
+        font-weight: 700;
+        color: $priceColor ;
+        margin-bottom: 5px;
+    }
+
+    &__count {
+        margin-right: 20px;
+    }
+
+    &__actions-list {
+        display: flex;
+    }
+
+    &__actions-btn {
+        color: $cardSelectItemEmpty;
+        fill: $cardSelectItemEmpty;
+        display: flex;
+        align-items: center;
+        padding: 12px;
+
+        &--comparison {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            color: $primaryColor;
+            fill: $primaryColor;
+        }
+
+
+        &:focus {
+            background-color: $formBtnColor;
+            color: $formTitleColor;
+        }
+        svg {
+            margin-right: 10px;
+        }
+        
+    }
+  
+}

@@ -1,0 +1,56 @@
+.newsletter {
+    padding: 50px 0;
+
+    &__wrap {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    &__form-box {
+        border: 1px solid $formBorderColor;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    &__box-title {
+        padding: 10px;
+        border-bottom: 1px solid $formBorderColor;
+        color: $formTitleColor;
+        font-size: 14px;
+    }
+
+    &__form-body {
+        padding: 10px;
+    }
+
+    &__explanation {
+        margin-bottom: 20px;
+    }
+
+    &__form-footer-info {
+        flex-grow: 1;
+        font-size: 14px;
+        line-height: calc(20/14);
+        margin-right: 20px;
+    }
+
+    &__form-footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__btn {
+        color: $formTitleColor;
+        background-color: $whiteColor;
+        border-color: $formSeparatorColor;
+        margin-top: 20px;
+
+        &:hover {
+            background-color: $formBtnColor;
+            border-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,209 @@
+.footer {
+    background: $footerBgColor;
+    padding-top: 60px;
+    color: $linkColor;
+    line-height: 1.4em;
+
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid $blockBorderColor;
+
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 50px;
+        }
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__connect {}
+
+    &__subtitle {
+        color: $primaryColor;
+        font-size: 17px;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    &__connect-text {
+        margin-bottom: 10px;
+    }
+
+    &__contact-row {
+        display: flex;
+
+    }
+
+    &__contact-row-name {
+        flex-basis: 110px;
+
+        svg {
+            fill: $linkColor;
+            margin-right: 5px;
+            flex-shrink: 0;
+        }
+    }
+
+    &__contact-row-value {}
+
+    &__list-item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        color: $linkColor;
+
+        &:hover {
+            transition: opacity .3s ease-in-out;
+            opacity: .8;
+        }
+    }
+
+    &__newsletter {
+        @media (max-width: 1200px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 10px;
+            position: relative;
+            border-top: 1px solid $blockBorderColor;
+            padding-top: 50px;
+        }
+
+        @media (max-width: 1200px) and (min-width: 901px) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+            row-gap: 15px;
+        }
+    }
+
+    &__newsletter-text {
+        margin-bottom: 30px;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &__email {
+        color: $primaryColor;
+        font-weight: 700;
+        border-width: 2px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__btn {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__social-item {
+        color: $linkColor;
+        font-size: 28px;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3px;
+        transition: .3s ease;
+        margin: 0 5px;
+        flex-shrink: 0;
+
+        svg {
+            fill: $linkColor;
+
+            &:hover {
+                fill: $primaryColor;
+            }
+        }
+
+
+    }
+
+    &__note {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    &__note-text {
+        a {
+            text-decoration: underline;
+            text-align: center;
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+        background: $footerBottomColor;
+        color: $linkColor;
+        padding: 15px 0;
+    }
+
+    &__copy {}
+
+    &__form {
+        @media (max-width: 900px) {
+            display: flex;
+        }
+
+        @media (max-width: 650px) {
+            flex-direction: column;
+        }
+    }
+
+    &__payment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    &__payment-item {
+        padding: 15px;
+        transition: .3s ease;
+
+        svg {
+            max-width: 8em;
+            height: 50px;
+            fill: $primaryColor;
+        }
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .footer {}
+}
+
+
+
+@media (max-width: 1023px) {
+    .footer {}
+}

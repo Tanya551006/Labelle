@@ -1,0 +1,31 @@
+.fashion {
+    
+    &__wrap {
+        text-align: center;
+    }
+
+    img {
+        max-width: 270px;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 44px;
+        color: $primaryColor;
+        margin-bottom: 20px;
+    }
+
+    &__content {
+
+    }
+
+    &__info {
+
+    }
+
+    &__text {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}

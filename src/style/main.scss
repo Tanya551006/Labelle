@@ -1,0 +1,28 @@
+// settings
+@import 'libs/reset';
+@import 'libs/_normalize';
+@import "settings/_fonts";
+@import "settings/_vars";
+@import "settings/_common";
+
+// components
+@import '../components/header/header';
+@import '../components/offer/offer';
+@import '../components/topic/topic';
+@import '../components/advantage/advantage';
+@import '../components/best-offer/best-offer';
+@import '../components/spec-offer/spec-offer';
+@import '../components/fashion/fashion';
+@import '../components/goods/goods';
+@import '../components/newsletter/newsletter';
+@import '../components/goods-row/goods-row';
+@import '../components/forgot-password/forgot-password';
+@import '../components/registration/registration';
+@import '../components/product-view/product-view';
+@import '../components/footer/footer';
+
+// elements
+@import 'elements/card';
+@import 'elements/warn';
+@import 'elements/form';
+@import 'elements/pagination';

@@ -1,0 +1,143 @@
+<!-- REGISTRATION START -->
+<section class="registration">
+    <div class="container">
+        <div class="registration__container section-block">
+            <h2 class="registration__title title--form mb-20">
+                Neues Kundenkonto erstellen
+            </h2>
+            <form action="" class="form">
+                <div class="form__block">
+                    <h3 class="form__subtitle mb-10">
+                        Adresse
+                    </h3>
+                    <div class="registration__form-block">
+                        <div class="registration__form-item registration__form-item--half">
+                            <label class="form-field" data-is-error="false">
+                                <div class="form-field__label"><b>Anrede</b></div>
+                                <select name="anrede" class="form-field__input" required>
+                                    <option value selected disabled>Anrede </option>
+                                    <option value="w">Frau</option>
+                                    <option value="m">Herr</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="registration__form-item registration__form-item--half">
+                            <label class="form-field" data-is-error="false">
+                                <div class="form-field__label"><b>Vorname</b></div>
+                                <input type="text" name="name" required placeholder="Vorname" class="form-field__input">
+                            </label>
+
+                            <label class="form-field" data-is-error="false">
+                                <div class="form-field__label"><b>Nachname</b></div>
+                                <input type="text" name="last_name" required placeholder="Nachname"
+                                    class="form-field__input">
+                            </label>
+                        </div>
+
+                        <div class="registration__form-item registration__form-item--second-long">
+                            <label class="form-field" data-is-error="false">
+                                <div class="form-field__label"><b>Straße</b></div>
+                                <input type="text" name="street" required placeholder="Straße"
+                                    class="form-field__input">
+                            </label>
+
+                            <label class="form-field" data-is-error="false">
+                                <div class="form-field__label"><b>Hausnummer</b></div>
+                                <input type="text" name="house_number" required placeholder="Hausnummer"
+                                    class="form-field__input">
+                            </label>
+                        </div>
+
+                        <div class="registration__form-item">
+                            <label class="form-field" data-is-error="false">
+                                <div class="form-field__label"><b>Land</b></div>
+                                <select name="land" class="form-field__input"  required>
+                                    <option value="" disabled="">Land</option>
+                                    <option value="DE" selected="">Deutschland</option>
+                                    <option value="CR">Costa Rica</option>
+                                    <option value="GR">Griechenland</option>
+                                    <option value="SE">Schweden</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <div class="registration__form-item registration__form-item--first-long">
+                            <label class="form-field" data-is-error="false">
+                                <div class="form-field__label"><b>PLZ</b></div>
+                                <input type="text" name="code" required placeholder="PLZ"
+                                    class="form-field__input">
+                            </label>
+
+                            <label class="form-field" data-is-error="false">
+                                <div class="form-field__label"><b>Ort</b></div>
+                                <input type="text" name="location" required placeholder="Ort"
+                                    class="form-field__input">
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <hr class="form-field__separator" />
+
+                    <div class="form__block">
+                        <h3 class="form__subtitle mb-10">
+                            Kontaktdaten
+                        </h3>
+                        <div class="registration__form-block">
+                            <div class="registration__form-item">
+                                <label class="form-field" data-is-error="false">
+                                    <div class="form-field__label"><b>E-Mail</b></div>
+                                    <input type="text" name="E-Mail" required placeholder="E-Mail"
+                                        class="form-field__input">
+                                </label>
+                            </div>
+
+                            <div class="registration__form-item registration__form-item--half">
+                                <label class="form-field">
+                                    <div class="form-field__label"><b>Telefon</b> - <span class="italic">optionale
+                                            Angabe</span></div>
+                                    <input type="tell" name="tell" placeholder="Telefon" class="form-field__input">
+                                </label>
+                            </div>
+
+                            <div class="registration__form-item">
+                                <label class="form-field">
+                                    <div class="form-field__label"><b>Geburtsdatum</b> - <span class="italic">optionale
+                                            Angabe</span></div>
+                                    <input type="date" name="date" class="form-field__input">
+                                </label>
+                            </div>
+
+                            <div class="registration__form-item registration__form-item--half">
+                                <label class="form-field" data-is-error="false">
+                                    <div class="form-field__label"><b>Passwort</b></div>
+                                    <input type="password" name="password" required placeholder="Passwort"
+                                        class="form-field__input">
+                                </label>
+
+                                <label class="form-field" data-is-error="false">
+                                    <div class="form-field__label"><b>Passwort (Wdh.)</b></div>
+                                    <input type="password" name="re-password" required placeholder="Passwort (Wdh.)"
+                                        class="form-field__input">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="form-field__separator" />
+
+                    <div class="form__block registration__form-footer">
+                        <a href="#" class="registration__privacy-policy text-link">
+                            Bitte beachten Sie unsere Datenschutzerklärung
+                        </a>
+                        <button class="registration__btn btn">
+                            Kundendaten abschicken
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- REGISTRATION END -->

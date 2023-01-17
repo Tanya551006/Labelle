@@ -1,0 +1,32 @@
+.advantage {
+    
+    &__wrap {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        text-align: center;
+        min-width: 185px;
+        padding: 20px;
+    }
+
+    &__img {
+        min-height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 22px;
+        margin-bottom: 5px;
+        line-height: 1.1em;
+    }
+
+    &__text {
+
+    }
+}

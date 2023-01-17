@@ -1,0 +1,12 @@
+//=include './scripts/warning-block.js'
+//=include './scripts/select.js'
+//=include './scripts/card.js'
+//=include './scripts/pagination.js'
+//=include './scripts/common.js'
+
+//=include '../components/header/header.js'
+//=include '../components/hero/hero.js'
+//=include '../components/best-offer/best-offer.js'
+//=include '../components/spec-offer/spec-offer.js'
+//=include '../components/product-view/product-view.js'
+//=include '../components/footer/footer.js'
