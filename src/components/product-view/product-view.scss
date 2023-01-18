@@ -1,9 +1,49 @@
 .product-view {
     &__wrap {
         display: flex;
+        padding: 0 30px;
+        position: relative;
 
         @media (max-width: 767px) {
             flex-direction: column;
+        }
+    }
+
+    &__external-link {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $breadcrumps;
+        transition: .3s ease;
+
+        svg {
+            fill: $breadcrumps;
+            transition: .3s ease;
+        }
+
+        &[data-link="prev"] {
+            left: -35px;
+        }
+
+        &[data-link="next"] {
+            right: -35px;
+        }
+
+        &:hover {
+            border-color: $cardSelectItemEmpty;
+
+            svg {
+                fill: $defaultFontColor;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            display: none;
         }
     }
 
@@ -108,9 +148,7 @@
         text-align: left;
     }
 
-    &__breadcrumps {
-
-    }
+    &__breadcrumps {}
 
     &__attention-block {
         margin-bottom: 5px;
@@ -125,11 +163,13 @@
     &__attention-text {
         padding-left: 20px;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
         position: relative;
+        color: $primaryColor;
 
         &--animation {
             svg {
+                fill: $primaryColor;
                 display: block;
                 position: absolute;
                 left: 0;
@@ -307,6 +347,10 @@
     &__info-text {
         font-size: 16px;
         color: $defaultFontColor;
+
+        .marked {
+            color: $primaryColor;
+        }
     }
 
     &__availability-block {
