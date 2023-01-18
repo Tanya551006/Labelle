@@ -433,6 +433,34 @@
         right: 0;
         min-width: 410px;
         padding: 25px 30px;
+
+        &--goods {
+            padding-bottom: 0;
+        }
+
+        @media (max-width: 767px) {
+            min-width: auto;
+            width: 280px;
+        }
+    }
+
+    &__basket-footer-info {
+        width: calc(100% + 60px);
+        margin-left: -30px;
+        padding: 10px;
+        text-align: center;
+        background: $formSeparatorColor;
+        color: $menuLinkColor;
+
+        a {
+            font-size: 0;
+            position: relative;
+            top: 2px;
+        }
+
+        svg {
+            fill: $menuLinkColor;
+        }
     }
 
     &__dropdown-link {
@@ -447,6 +475,80 @@
 
         @media (min-width: 1040px) {
             display: none;
+        }
+    }
+
+    &__basket-good-container-item {
+        height: 140px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__basket-footer-block {
+        margin-top: 20px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    &__basket-footer-row {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $inputBorderColor;
+        padding: 8px;
+        color: $menuLinkColor;
+
+        a {
+            color: $menuLinkColor;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__basket-submit-btn {
+        width: 100%;
+    }
+
+    &__basket-footer-total {
+        font-weight: 700;
+    }
+
+    &__to-basket-btn {
+        color: $menuLinkColor;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 12px;
+        display: block;
+        margin-top: 5px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__basket-good-info {
+        color: $primaryColor;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: $primaryColor;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__basket-good-img-wrap {
+        height: 100%;
+
+        img {
+            height: 100%;
+            object-fit: contain;
         }
     }
 }

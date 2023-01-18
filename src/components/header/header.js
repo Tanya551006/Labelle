@@ -50,6 +50,24 @@
   })
 }
 
+{
+  const basketBtn = document.querySelector('.header__basket');
+
+  basketBtn.addEventListener('click', function() {
+    const btnParent = this.closest('.header__basket-wrap');
+
+    btnParent.dataset.isActive = `${btnParent.dataset.isActive === 'false'}`;
+  })
+
+  document.addEventListener('click', (e) => {
+    const basketContainer = e.target.closest('.header__basket-wrap');
+
+    if (!basketContainer) {
+      basketContainer.dataset.isActive = `${false}`;
+    }
+  })
+}
+
 { // user form
   const userBtn = document.querySelector('.header__user');
   const userBlock = document.querySelector('.header__user-wrap');

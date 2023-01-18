@@ -1,0 +1,143 @@
+.tools {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+
+    &__btn {
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 700;
+        color: $defaultFontColor;
+        text-transform: uppercase;
+        transition: .3s ease;
+        border-bottom: 2px solid transparent;
+
+        svg {
+            fill: $defaultFontColor;
+        }
+
+        &--view {
+            transition: .3s ease;
+
+            &:hover {
+                opacity: .7;
+            }
+
+            &[data-is-active="true"] {
+                pointer-events: none;
+
+                svg {
+                    fill: $primaryColor;
+                }
+            }
+         }
+
+        &:hover {
+            color: $formTitleColor;
+
+            .tools {
+                &__btn-icon {
+                    fill: $formTitleColor;
+                }
+            }
+        }
+    }
+
+    &__btn-icon {
+        margin: 0 5px;
+        transition: .3s ease;
+    }
+
+    &__count-on-page {
+        font-size: 14px;
+        font-weight: 300;
+        color: $goodsTextColor;
+        margin-left: auto;
+        padding: 12px;
+    }
+
+    &__btn-container {
+        position: relative;
+        transition: .3s ease;
+
+        &[data-is-active="true"] {
+            .tools {
+                &__btn {
+                    border-bottom: 2px solid $primaryColor;
+                }
+
+                &__sublist {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__sublist {
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        box-shadow: $selectBodyShadow;
+        background: $whiteColor;
+        z-index: 1;
+        display: none;
+        min-width: 100%;
+    }
+
+    &__common-list-item {
+        font-size: 16px;
+        color: $darkColor;
+        padding: 0 20px;
+        transition: .3s ease;
+        cursor: pointer;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        height: 30px;
+
+        .count-circle {
+            border-radius: 100px;
+            background: $primaryColor;
+            color: $whiteColor;
+            padding: 0 7px;
+            font-size: 15px;
+            font-weight: 700;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        &:hover {
+            background: $selectItemHover;
+            opacity: .7;
+        }
+
+        &[data-is-active="true"] {
+            background: $primaryColor;
+            color: $whiteColor;
+        }
+    }
+
+    &__list-item-squares {
+        fill: $defaultFontColor;
+        margin-right: 5px;
+    }
+
+    &__view-btns {
+        display: flex;
+    }
+
+    &__breadcrumps {
+        padding: 12px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+}
