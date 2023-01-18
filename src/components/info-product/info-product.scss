@@ -84,19 +84,4 @@
         font-weight: 700;
 
     }
-
-    &__attributes-value {
-
-        &--underline {
-            text-decoration: underline;
-        }
-        a {
-            color: $primaryColor;
-
-            &:hover {
-                transition: opacity .3s ease-in-out;
-                opacity: .7;
-            }
-        }
-    }
 }

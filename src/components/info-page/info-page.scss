@@ -9,12 +9,147 @@
             font-weight: 700;
         }
     }
+
+    ol {
+        list-style: decimal;
+        padding-left: 40px;
+        margin-bottom: 30px;
+
+        li {
+            margin-bottom: 25px;
+
+            a {
+                display: flex;
+                width: 400px;
+                height: auto;
+            }
+        }
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 40px;
+        margin-bottom: 30px;
+
+    }
+
+
+}
+
+.costum-tab {
+    &__box {
+        display: flex;
+        margin-bottom: 30px;
+
+        @media (max-width:900px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+
+    &__item {
+        min-width: 120px;
+        border: 1px solid $primaryColor;
+        padding: 6px;
+        width: 17%;
+
+        &:hover {
+            font-weight: 600;
+            color: $faqUnderlineColor;
+            background-color: $customTabBgColor;
+            transition: opacity .3s ease-in-out;
+            opacity: .7;
+        }
+
+    }
+
+    &__input {
+        position: relative;
+        margin-bottom: 20px;
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__search {
+        border-radius: 10px;
+        background-size: 20px;
+        border: 1px solid $primaryColor;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        width: 100%;
+
+        &:focus {
+            border: 2px solid $darkColor;
+        }
+    }
+}
+
+.faq {
+
+    &__container {
+        margin-left: 40px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    &__item {
+        margin-bottom: 10px;
+    }
+
+    &__question {
+        letter-spacing: .15em;
+        display: flex;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $faqBgColor;
+        border-radius: 10px;
+        padding: 20px;
+        color: $whiteColor;
+        box-shadow: $faqShadowColor;
+    }
+
+    &__question-text {
+        &:hover {
+            transition: opacity .3s ease-in-out;
+            opacity: .7;
+            text-decoration: underline;
+            text-decoration-color: $faqUnderlineColor;
+        }
+    }
+
+
+
+    &__answer {
+        padding: 20px;
+    }
 }
 
 .delivery {
     &__table {
         width: 50%;
         margin-bottom: 20px;
+
+        @media (max-width: 1023px) {
+            width: 70%;
+        }
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+
+        @media (max-width: 639px) {
+            width: 100%;
+        }
     }
 
     &__row {
@@ -35,6 +170,10 @@
         h3 {
             width: 100%;
         }
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
     }
 
     &__input {
@@ -47,6 +186,11 @@
         &--land {
             max-width: 250px;
             margin-right: 20px;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+            margin-bottom: 20px;
         }
     }
 
@@ -63,11 +207,33 @@
         &:hover {
             background-color: $formBtnColor;
         }
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+            margin: 0 0 20px;
+        }
     }
 
     &__form-title {
         font-size: 22px;
         text-transform: uppercase;
         margin-bottom: 30px;
+    }
+}
+
+.contact {
+    &__title {
+        color: $formTitleColor;
+        font-size: 24px;
+    }
+
+    &__form-link {
+        display: block;
+    }
+}
+
+.boutiques {
+    &__link {
+        display: block;
     }
 }
