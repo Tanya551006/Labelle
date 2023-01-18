@@ -109,17 +109,7 @@
     }
 
     &__breadcrumps {
-        display: flex;
-        flex-wrap: wrap;
-        color: $breadcrumps;
 
-        span {
-            margin: 0 5px;
-        }
-
-        a {
-            color: $breadcrumps;
-        }
     }
 
     &__attention-block {

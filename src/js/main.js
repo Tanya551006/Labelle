@@ -2,6 +2,7 @@
 //=include './scripts/select.js'
 //=include './scripts/card.js'
 //=include './scripts/pagination.js'
+//=include './scripts/tools.js'
 //=include './scripts/common.js'
 
 //=include '../components/header/header.js'
@@ -11,4 +12,3 @@
 //=include '../components/product-view/product-view.js'
 //=include '../components/info-product/info-product.js'
 //=include '../components/basket-form/basket-form.js'
-//=include '../components/footer/footer.js'

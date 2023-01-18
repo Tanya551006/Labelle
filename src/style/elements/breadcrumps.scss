@@ -1,0 +1,22 @@
+.breadcrumps {
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        color: $breadcrumps;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        span {
+            margin: 0 5px;
+        }
+
+        a {
+            color: $breadcrumps;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
