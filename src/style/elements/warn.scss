@@ -41,9 +41,15 @@
             opacity: .5;
         }
     }
-}
 
-.warn--hint {
-    color: $warnBlueColor;
-    background-color: $warnBlueBgColor;
+    &--hint {
+        color: $warnBlueColor;
+        background-color: $warnBlueBgColor;
+    }
+
+    &--attention {
+        svg {
+            fill: $primaryColor;
+        }
+    }
 }

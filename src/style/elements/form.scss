@@ -1,5 +1,6 @@
 .form-field {
     display: block;
+    width: 100%;
 
     &[data-is-error="true"] {
         .form-field {

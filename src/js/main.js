@@ -9,4 +9,6 @@
 //=include '../components/best-offer/best-offer.js'
 //=include '../components/spec-offer/spec-offer.js'
 //=include '../components/product-view/product-view.js'
+//=include '../components/info-product/info-product.js'
+//=include '../components/basket-form/basket-form.js'
 //=include '../components/footer/footer.js'

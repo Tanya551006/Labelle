@@ -1,0 +1,382 @@
+.basket-form {
+    &__title {
+        text-align: left;
+    }
+
+    &__img-wrap {
+        font-size: 0;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 115px 1fr 130px 12% 12%;
+        column-gap: 10px;
+
+        @media (max-width: 1039px) {
+            grid-template-columns: 115px 1fr 130px 12%;
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: 4fr 2fr 80px;
+            column-gap: 5px;
+        }
+
+        &--tax {
+            margin: -10px 0;
+        }
+
+        &--footer {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            text-align: right;
+            column-gap: 20px;
+            border-top: 1px solid $formSeparatorColor;
+            border-bottom: 1px solid $formSeparatorColor;
+            padding: 10px 0;
+            margin-bottom: 15px;
+        }
+
+        &--common {
+            & > div:nth-child(4),
+            & > div:nth-child(5) {
+                text-align: right;
+            }
+
+            @media (max-width: 1039px) {
+                & > div:nth-child(4) {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 767px) {
+                & > div:nth-child(1) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__form-separator {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin: 10px 0;
+    }
+
+    &__table {
+        margin-bottom: 30px;
+    }
+
+    &__table-head {
+        border-bottom: 2px solid $formSeparatorColor;
+    }
+
+    &__head-cell {
+        font-weight: 700;
+        text-align: left;
+        padding: 20px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        @media (max-width: 767px) {
+            padding: 20px 0;
+        }
+    }
+
+    &__table-cell {
+        padding: 20px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        &--img {
+            padding: 15px 0;
+        }
+
+        &--price {
+            font-size: 16px;
+        }
+
+        &--total {
+            font-size: 16px;
+            font-weight: 700;
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            padding: 10px 0;
+        }
+    }
+
+    &__count-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__change-count-btn {
+        width: 20px;
+        height: 24px;
+        border: 1px solid $headerBtnContainerBgColor;
+        position: relative;
+        transition: .3s ease;
+        margin: 0 10px;
+
+        &::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: $defaultFontColor transparent transparent transparent;
+            border-width: 4px 4px 0 4px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+            background: $basketBtnHover;
+        }
+
+        &[data-is-active="true"] {
+            & ~ .basket-form__count-tooltip {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__good-name {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: $defaultFontColor;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+
+    &__info-row {
+        font-size: 14px;
+        color: $goodsTextColor;
+
+        b {
+            font-weight: 700;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__delete-good-btn {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        font-size: 0;
+
+        svg {
+            fill: $defaultFontColor;
+            transition: .3s ease;
+        }
+
+        &:hover {
+            svg {
+                fill: $darkColor;
+            }
+        }
+    }
+
+    &__count-tooltip {
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        background: $whiteColor;
+        z-index: 1;
+        width: 160px;
+        box-shadow: $selectBodyShadow;
+        padding: 10px 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s ease;
+    }
+
+    &__count-input-container {
+        display: flex;
+    }
+
+    &__count-input {
+        text-align: right;
+    }
+
+    &__count-label {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    &__count-submit-btn {
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: .3s ease;
+        border: 1px solid $headerBtnContainerBgColor;
+        border-left: none;
+
+        svg {
+            fill: $defaultFontColor;
+        }
+
+        &:hover {
+            background: $basketBtnHover;
+        }
+    }
+
+    &__tax-field {
+        font-size: 16px;
+    }
+
+    &__total-word {
+        font-size: 16px;
+        font-weight: 700;
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+        }
+    }
+
+    &__total-amount {
+        font-size: 30px;
+        font-weight: 700;
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+        }
+    }
+
+    &__add-delivery-line {
+        text-align: right;
+        font-size: 14px;
+
+        a {
+            color: $primaryColor;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__submit-block {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+
+    &__coupon-form {
+        display: flex;
+
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
+    }
+
+    &__coupon-input {
+        @media (max-width: 500px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__active-coupon-btn {
+        white-space: nowrap;
+        font-size: 16px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $defaultFontColor;
+        transition: .3s ease;
+        border: 1px solid $headerBtnContainerBgColor;
+
+        &:hover {
+            background: $basketBtnHover;
+        }
+    }
+
+    &__submit-text {
+        margin-right: 15px;
+
+        b {
+            font-weight: 700;
+            color: $primaryColor;
+        }
+
+        @media (max-width: 1039px) {
+            text-align: right;
+        }
+    }
+
+    &__submit-btn-block {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 1039px) {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+    }
+
+    &__paypal-btn {
+        background: $paypalColor;
+        color: $whiteColor;
+        width: 100%;
+        max-width: 700px;
+        height: 43px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        transition: .3s ease;
+
+        &:hover {
+            filter: brightness(0.95);
+        }
+
+        img {
+            height: 20px;
+            margin-left: 5px;
+        }
+    }
+
+    &__submit-btn {
+        @media (max-width: 1039px) {
+            margin-bottom: 10px;
+        }
+    }
+}

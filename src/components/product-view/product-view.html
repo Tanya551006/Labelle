@@ -4,17 +4,17 @@
             <div class="product-view__gallery">
                 <div class="product-view__gallery-list">
                     <div class="product-view__gallery-item">
-                        <img src="./img/gallery/product1.jpg" alt="" class="product-view__gallery-img">
+                        <img src="./img/product/product1.jpg" alt="" class="product-view__gallery-img">
                     </div>
 
                     <div class="product-view__gallery-item">
-                        <img src="./img/gallery/product2.jpg" alt="" class="product-view__gallery-img">
+                        <img src="./img/product/product2.jpg" alt="" class="product-view__gallery-img">
                     </div>
                 </div>
 
                 <div class="product-view__main-img">
                     <div class="product-view__gallery-main-item">
-                        <img src="./img/gallery/product1.jpg" alt="" class="product-view__gallery-main-img">
+                        <img src="./img/product/product1.jpg" alt="" class="product-view__gallery-main-img">
                     </div>
                 </div>
             </div>
@@ -178,16 +178,88 @@
                     </div>
                 </div>
 
+                <button class="btn product-view__order-btn mb-15">
+                    In den Warenkorb
+                </button>
+
+                <div class="product-view__order-count-block mb-20">
+                    <div class="card__count-field product-view__count-field">
+                        <button class="card__count-btn card__count-btn--minus" data-type="minus"></button>
+                        <input type="number" value="1" class="card__count-input">
+                        <button class="card__count-btn card__count-btn--plus" data-type="plus"></button>
+                    </div>
+
+                    <div class="product-view__amazon-btn-wrap">
+                        <div class="product-view__ask-icon">
+                            <svg width="20" height="20">
+                                <use href="./img/icons/svg_sprite.svg#icon-questionMark"></use>
+                            </svg>
+                        </div>
+
+                        <button class="product-view__amazon-btn">
+                            <img src="./img/goods/amazon_img.svg" alt="" class="logo">
+                            <img src="./img/goods/arrows.svg" alt="" class="arrow">
+                        </button>
+
+                        <img src="./img/goods/amazon_subtext.svg" alt="" class="amazon-subtext">
+                    </div>
+                </div>
+
+                <button class="product-view__paypal-btn">
+                    <span>Direkt zu</span>
+
+                    <img src="./img/icons/paypal.svg" alt="">
+                </button>
+
                 <div class="product-view__choosen-info">
                     Dieser Artikel hat Variationen. Wählen Sie bitte die gewünschte Variation aus.
                 </div>
 
                 <div class="product-view__delivery-info product-view__delivery-info--immediately">
-                    <svg width="16" height="16">
-                        <use href="./img/icons/svg_sprite.svg#icon-truck"></use>
-                    </svg>
+                    <div class="product-view__delivery-info-row">
+                        <svg width="16" height="16">
+                            <use href="./img/icons/svg_sprite.svg#icon-truck"></use>
+                        </svg>
 
-                    <span class="product-view__delivery-text">Sofort verfügbar</span>
+                        <span class="product-view__delivery-text">Sofort verfügbar</span>
+                    </div>
+
+                    <div class="product-view__delivery-info-row product-view__delivery-info-row--hint">
+                        <span class="product-view__delivery-text">Lieferzeit: 3 - 7 Werktage</span>
+
+                        <svg width="16" height="16">
+                            <use href="./img/icons/svg_sprite.svg#icon-info"></use>
+                        </svg>
+
+                        <div class="product-view__hint">
+                            Die angegebenen Lieferzeiten gelten für den Versand innerhalb von Deutschland. Die Lieferzeiten für den
+                            <a href="#">Versand ins Ausland</a> finden Sie in unseren
+                            <a href="#">Versandinformationen</a>.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-view__tools-panel">
+                    <button class="product-view__tool-btn">
+                        <svg width="16" height="16">
+                            <use href="./img/icons/svg_sprite.svg#icon-heart"></use>
+                        </svg>
+                        <span>Wunschzettel</span>
+                    </button>
+
+                    <button class="product-view__tool-btn">
+                        <svg width="16" height="16">
+                            <use href="./img/icons/svg_sprite.svg#icon-tasks"></use>
+                        </svg>
+                        <span>Vergleichsliste</span>
+                    </button>
+
+                    <button class="product-view__tool-btn">
+                        <svg width="16" height="16">
+                            <use href="./img/icons/svg_sprite.svg#icon-questionMark"></use>
+                        </svg>
+                        <span>Vergleichsliste</span>
+                    </button>
                 </div>
             </div>
         </div>
