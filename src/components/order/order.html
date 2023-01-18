@@ -2,50 +2,306 @@
 <section class="order section-block">
     <div class="container">
         <div class="order__tabs-head">
+            <div class="order__tab-head" data-is-active="false" data-tab="1">
+                <span class="desktop">Rechnungs- und Lieferadresse</span>
+                <span class="mobile">
+                    <svg width="16" height="16">
+                        <use href="./img/icons/svg_sprite.svg#icon-user"></use>
+                    </svg>
+                </span>
+            </div>
 
+            <div class="order__tab-head" data-is-active="false" data-tab="2">
+                <span class="desktop">Versand- und Zahlungsart</span>
+                <span class="mobile">
+                    <svg width="16" height="16">
+                        <use href="./img/icons/svg_sprite.svg#icon-truck"></use>
+                    </svg>
+                </span>
+            </div>
+
+            <div class="order__tab-head" data-is-active="true" data-tab="3">
+                <span class="desktop">Zusammenfassung</span>
+                <span class="mobile">
+                    <svg width="16" height="16">
+                        <use href="./img/icons/svg_sprite.svg#icon-wpforms"></use>
+                    </svg>
+                </span>
+            </div>
         </div>
         <div class="order__tabs-body">
-            <div class="order__tab">
-                <form class="order__contact">
-                    <div class="order__contact-block">
-                        <h3 class="order__contact-title">
+            <div class="order__tab-body" data-tab="1" data-is-active="false">
+                <div class="order__contact">
+                    <form class="order__contact-block">
+                        <h3 class="order__title title--form-subblock">
                             ICH BIN BEREITS KUNDE
                         </h3>
                         <div class="order__contact-box">
-                            <label class="form-field" data-is-error="false">
-                                <div class="form-field__label"><b>E-Mail</b></div>
-                                <input type="text" name="E-Mail" required placeholder="E-Mail"
-                                    class="form-field__input">
-                            </label>
-                            <label class="form-field" data-is-error="false">
-                                <div class="form-field__label"><b>Passwort</b></div>
-                                <input type="password" name="re-password" required placeholder="Passwort"
-                                    class="form-field__input">
-                            </label>
+                            <div class="registration__form-item">
 
-                            <a href="./forgot-password.html" class="header__password-forgotten mb-30 text-link">
-                                Passwort vergessen
+                                <label class="form-field" data-is-error="false">
+                                    <div class="form-field__label">E-Mail</div>
+                                    <input type="text" name="E-Mail" required placeholder="E-Mail"
+                                        class="form-field__input">
+                                </label>
+                                <label class="form-field" data-is-error="false">
+                                    <div class="form-field__label">Passwort</div>
+                                    <input type="password" name="password" required placeholder="Passwort"
+                                        class="form-field__input">
+                                </label>
+
+                            </div>
+
+                            <a href="./forgot-password.html" class="registration__password-forgotten mb-30 text-violet-link">
+                                <svg width="16" height="16">
+                                    <use href="./img/icons/svg_sprite.svg#icon-questionMark"></use>
+                                </svg>
+                                <span> Passwort vergessen</span>
                             </a>
 
-                            <button class="btn mb-15">
-                                <svg width="16" height="16" class="btn__icon">
-                                    <use href="./img/icons/svg_sprite.svg#icon-user"></use>
-                                </svg>
-                                <span>Anmelden</span>
+                            <button class="registration__btn btn registration__width-btn mb-15">
+                                Anmelden
                             </button>
 
+                            <button class="order__contact-paypal-btn">
+                                <span>Direkt zu</span>
+
+                                <img src="./img/icons/paypal.svg" alt="">
+                            </button>
 
                         </div>
-                    </div>
+                    </form>
 
-                    <div class="order__contact-block">
+                    <form class="order__contact-block order__contact-block--new-client">
+                        <div class="order__contact-wrap">
+                            <h3 class=" order__title title--form-subblock">
+                                ALS NEUKUNDE FORTFAHREN
+                            </h3>
+                            <div class="order__contact-box">
+                                <div class="registration__form-item registration__form-item--half">
+                                    <label class="form-field" data-is-error="false">
+                                        <div class="form-field__label">Anrede</div>
+                                        <select name="anrede" class="form-field__input" required>
+                                            <option value selected disabled>Anrede </option>
+                                            <option value="w">Frau</option>
+                                            <option value="m">Herr</option>
+                                        </select>
+                                    </label>
+                                </div>
 
-                    </div>
-                </form>
+                                <div class="registration__form-item registration__form-item--half">
+                                    <label class="form-field" data-is-error="false">
+                                        <div class="form-field__label">Vorname</div>
+                                        <input type="text" name="name" required placeholder="Vorname"
+                                            class="form-field__input">
+                                    </label>
+
+                                    <label class="form-field" data-is-error="false">
+                                        <div class="form-field__label">Nachname</div>
+                                        <input type="text" name="last_name" required placeholder="Nachname"
+                                            class="form-field__input">
+                                    </label>
+                                </div>
+
+                                <div class="registration__form-item registration__form-item--second-long">
+                                    <label class="form-field" data-is-error="false">
+                                        <div class="form-field__label">Straße</div>
+                                        <input type="text" name="street" required placeholder="Straße"
+                                            class="form-field__input">
+                                    </label>
+
+                                    <label class="form-field" data-is-error="false">
+                                        <div class="form-field__label">Hausnummer</div>
+                                        <input type="text" name="house_number" required placeholder="Hausnummer"
+                                            class="form-field__input">
+                                    </label>
+                                </div>
+
+                                <div class="registration__form-item">
+                                    <label class="form-field" data-is-error="false">
+                                        <div class="form-field__label">Land</div>
+                                        <select name="land" class="form-field__input" required>
+                                            <option value="" disabled="">Land</option>
+                                            <option value="DE" selected="">Deutschland</option>
+                                            <option value="CR">Costa Rica</option>
+                                            <option value="GR">Griechenland</option>
+                                            <option value="SE">Schweden</option>
+                                        </select>
+                                    </label>
+                                </div>
+
+                                <div class="registration__form-item registration__form-item--first-long">
+                                    <label class="form-field" data-is-error="false">
+                                        <div class="form-field__label">PLZ</div>
+                                        <input type="text" name="code" required placeholder="PLZ"
+                                            class="form-field__input">
+                                    </label>
+
+                                    <label class="form-field" data-is-error="false">
+                                        <div class="form-field__label">Ort</div>
+                                        <input type="text" name="location" required placeholder="Ort"
+                                            class="form-field__input">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order__contact-wrap">
+                            <h3 class="order__title title--form-subblock">
+                                KONTAKTDATEN
+                            </h3>
+                            <div class="order__contact-box">
+                                <div class="registration__form-item">
+                                    <label class="form-field" data-is-error="false">
+                                        <div class="form-field__label">E-Mail</div>
+                                        <input type="text" name="E-Mail" required placeholder="E-Mail"
+                                            class="form-field__input">
+                                    </label>
+                                </div>
+
+                                <div class="registration__form-item registration__form-item--half">
+                                    <label class="form-field">
+                                        <div class="form-field__label">Telefon - <span class="italic">optionale
+                                                Angabe</span></div>
+                                        <input type="tell" name="tell" placeholder="Telefon" class="form-field__input">
+                                    </label>
+                                </div>
+
+                                <div class="registration__form-item">
+                                    <label class="form-field">
+                                        <div class="form-field__label">Geburtsdatum - <span
+                                                class="italic">optionale
+                                                Angabe</span></div>
+                                        <input type="date" name="date" class="form-field__input">
+                                    </label>
+                                </div>
+
+                                <div class="registration__form-item registration__form-item--radio">
+                                    <input id="create-new-client" class="registration__checkbox-input" type="checkbox">
+
+                                    <label class="registration__checkbox-label" for="create-new-client">Neues Kundenkonto erstellen</label>
+                                    
+                                    <div class="registration__hide-form-block">
+                                        <div class="registration__form-item registration__form-item--half">
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">Passwort</div>
+                                                <input type="password" name="password" required placeholder="Passwort"
+                                                    class="form-field__input">
+                                            </label>
+        
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">Passwort (Wdh.)</div>
+                                                <input type="password" name="re-password" required placeholder="Passwort (Wdh.)"
+                                                    class="form-field__input">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="registration__form-item registration__form-item--radio">
+                                    <input id="delivery-checkbox-registration" class="registration__checkbox-input" type="checkbox">
+
+                                    <label class="registration__checkbox-label" for="delivery-checkbox-registration">Lieferadresse entspricht der Rechnungsadresse</label>
+                                    
+                                    <div class="registration__hide-form-block registration__hide-form-block--reverse">
+                                        <div class="form-field__block-title mb-15">
+                                            <h4 class="registration__form-subtitle title--form-subblock">
+                                                Neue Lieferadresse erstellen
+                                            </h4>
+                                        </div>
+
+                                        <div class="registration__form-item registration__form-item--half">
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">Anrede</div>
+                                                <select name="anrede" class="form-field__input" required>
+                                                    <option value selected disabled>Anrede </option>
+                                                    <option value="w">Frau</option>
+                                                    <option value="m">Herr</option>
+                                                </select>
+                                            </label>
+
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">Titel - <span class="italic">optionale Angabe</span></div>
+                                                <input type="text" name="titel" required placeholder="titel"
+                                                    class="form-field__input">
+                                            </label>
+                                        </div>
+
+                                        <div class="registration__form-item registration__form-item--half">
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">Vorname</div>
+                                                <input type="text" name="name" required placeholder="Vorname"
+                                                    class="form-field__input">
+                                            </label>
+        
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">Nachname</div>
+                                                <input type="text" name="last_name" required placeholder="Nachname"
+                                                    class="form-field__input">
+                                            </label>
+                                        </div>
+        
+                                        <div class="registration__form-item registration__form-item--second-long">
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">Straße</div>
+                                                <input type="text" name="street" required placeholder="Straße"
+                                                    class="form-field__input">
+                                            </label>
+        
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">Hausnummer</div>
+                                                <input type="text" name="house_number" required placeholder="Hausnummer"
+                                                    class="form-field__input">
+                                            </label>
+                                        </div>
+        
+                                        <div class="registration__form-item">
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">Land</div>
+                                                <select name="land" class="form-field__input" required>
+                                                    <option value="" disabled="">Land</option>
+                                                    <option value="DE" selected="">Deutschland</option>
+                                                    <option value="CR">Costa Rica</option>
+                                                    <option value="GR">Griechenland</option>
+                                                    <option value="SE">Schweden</option>
+                                                </select>
+                                            </label>
+                                        </div>
+        
+                                        <div class="registration__form-item registration__form-item--first-long">
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">PLZ</div>
+                                                <input type="text" name="code" required placeholder="PLZ"
+                                                    class="form-field__input">
+                                            </label>
+        
+                                            <label class="form-field" data-is-error="false">
+                                                <div class="form-field__label">Ort</div>
+                                                <input type="text" name="location" required placeholder="Ort"
+                                                    class="form-field__input">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form__block registration__form-footer">
+                                    <a href="#" class="registration__privacy-policy text-violet-link">
+                                        Bitte beachten Sie unsere Datenschutzerklärung
+                                    </a>
+                                    <button class="registration__btn btn">
+                                        Kundendaten abschicken
+                                    </button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="order__tab">
+            <div class="order__tab-body" data-tab="2" data-is-active="false">
                 <form class="order__delivery-block">
-                    <h3 class="title--form-subblock">
+                    <h3 class="order__title title--form-subblock">
                         VERSANDART
                     </h3>
 
@@ -71,8 +327,10 @@
                             <input type="radio" class="form-field__radio" name="item">
 
                             <div class="order__delivery-item-text order__delivery-item-text--img">
-                                <div class="order__delivery-img-box">
-                                    <img src="./img/order/labelle.jpg" alt="labelle">
+                                <div class="order__delivery-item-img-wrap">
+                                    <p class="order__delivery-item-img-container">
+                                        <img src="./img/order/labelle.jpg" alt="labelle">
+                                    </p>
 
                                     <p>
                                         Lieferzeit : 3 -7 Werktage
@@ -96,49 +354,50 @@
                         </label>
                     </div>
 
-                    <h3 class="title--form-subblock">
-                        ZAHLUNGSART
-                    </h3>
-
                     <div class="order__radio-wrapper">
-                        <label class="form-field order__radio-container">
-                            <input type="radio" class="form-field__radio" name="variant">
+                        <h3 class="order__title title--form-subblock">
+                            ZAHLUNGSART
+                        </h3>
 
-                            <div class="order__delivery-item-text">
-                                <div class="order__delivery-img-box">
-                                    <img src="./img/order/paypal.svg" alt="paypal">
+                        <div class="order__radio-wrapper">
+                            <label class="form-field order__radio-container">
+                                <input type="radio" class="form-field__radio" name="variant">
 
-                                    <p>
-                                        PayPal
-                                    </p>
+                                <div class="order__delivery-item-text">
+                                    <div class="order__delivery-img-box">
+                                        <img src="./img/order/paypal.svg" alt="paypal">
+
+                                        <p>
+                                            PayPal
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </label>
+                            </label>
 
-                        <label class="form-field order__radio-container">
-                            <input type="radio" class="form-field__radio" name="variant">
+                            <label class="form-field order__radio-container">
+                                <input type="radio" class="form-field__radio" name="variant">
 
-                            <div class="order__delivery-item-text">
-                                <div class="order__delivery-img-box">
-                                    <img src="./img/order/kredit.svg" alt="kredit">
+                                <div class="order__delivery-item-text">
+                                    <div class="order__delivery-img-box">
+                                        <img src="./img/order/kredit.svg" alt="kredit">
 
-                                    <p>
+                                        <p>
 
-                                        Kredit- oder Debitkarte
-                                    </p>
+                                            Kredit- oder Debitkarte
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </label>
+                            </label>
 
-                        <label class="form-field order__radio-container">
-                            <input type="radio" class="form-field__radio" name="variant">
+                            <label class="form-field order__radio-container">
+                                <input type="radio" class="form-field__radio" name="variant">
 
-                            <div class="order__delivery-item-text">
+                                <div class="order__delivery-item-text">
                                     <p>
                                         Rechnungskauf
                                     </p>
                                 </div>
-                            </div>
+                        </div>
                         </label>
 
                         <label class="form-field order__radio-container">
@@ -169,6 +428,149 @@
                         </label>
                     </div>
                 </form>
+
+                <button class="btn order__delivery-btn">
+                    Weiter
+                </button>
+            </div>
+            <div class="order__tab-body" data-tab="3" data-is-active="true">
+                <div class="order__client-info">
+                    <div class="order__client-info-block">
+                        <h3 class="order__title title--form-subblock">
+                            RECHNUNGSADRESSE & LIEFERADRESSE
+                        </h3>
+                        
+                        <div class="order__client-info-box order__client-info-box--grid">
+                            <div class="order__client-info-column order__client-info-column--first">
+                                <h5 class="order__client-info-column-title">
+                                    Rechnungsadresse
+                                </h5>
+
+                                <div class="order__client-info-row">
+                                    Some text
+                                </div>
+                                <div class="order__client-info-row">
+                                    Some text
+                                </div>
+                                <div class="order__client-info-row">
+                                    Some text
+                                </div>
+                                <div class="order__client-info-row mb-20">
+                                    Some text
+                                </div>
+                                <div class="order__client-info-row">
+                                    Some text
+                                </div>
+                                <div class="order__client-info-row mb-20">
+                                    Some text
+                                </div>
+
+                                <a href="#" class="order__client-info-edit-link">
+                                    <svg width="14" height="14">
+                                        <use href="./img/icons/svg_sprite.svg#icon-pencil"></use>
+                                    </svg>
+                                    <span>Rechnungsadresse ändern</span>
+                                </a>
+                            </div>
+
+                            <div class="order__client-info-column">
+                                <h5 class="order__client-info-column-title">
+                                    Rechnungsadresse
+                                </h5>
+
+                                <div class="order__client-info-row">
+                                    Some text
+                                </div>
+                                <div class="order__client-info-row">
+                                    Some text
+                                </div>
+                                <div class="order__client-info-row">
+                                    Some text
+                                </div>
+                                <div class="order__client-info-row mb-20">
+                                    Some text
+                                </div>
+                                <div class="order__client-info-row">
+                                    Some text
+                                </div>
+                                <div class="order__client-info-row mb-20">
+                                    Some text
+                                </div>
+
+                                <a href="#" class="order__client-info-edit-link">
+                                    <svg width="14" height="14">
+                                        <use href="./img/icons/svg_sprite.svg#icon-pencil"></use>
+                                    </svg>
+                                    <span>Rechnungsadresse ändern</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="order__client-info-block">
+                        <h3 class="order__title title--form-subblock">
+                            VERSANDART & ZAHLUNGSART
+                        </h3>
+
+                        <div class="order__client-info-box order__client-info-box--column">
+                            <div class="order__client-info-row mb-20">
+                                <b>Versandart:</b> Versand Österreich mit Post Österreich
+                            </div> 
+                    
+                            <div class="order__client-info-hint mb-20">
+                                <b>Lieferzeit:</b> 5 - 10 Werktage
+                            </div>
+
+                            <a href="#" class="order__client-info-edit-link">
+                                <svg width="14" height="14">
+                                    <use href="./img/icons/svg_sprite.svg#icon-pencil"></use>
+                                </svg>
+                                <span>Versandart ändern</span>
+                            </a>
+
+                            <hr class="form-field__separator"/>
+
+                            <div class="order__client-info-row mb-20">
+                                <b>Zahlungsart:</b> Kreditkarte
+                            </div> 
+
+                            <div class="order__client-info-hint mb-20">
+                                Bezahlen Sie bequem mit Kreditkarte.
+                            </div>
+
+                            <a href="#" class="order__client-info-edit-link">
+                                <svg width="14" height="14">
+                                    <use href="./img/icons/svg_sprite.svg#icon-pencil"></use>
+                                </svg>
+                                <span>Zahlungsart ändern</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="order__client-info-block">
+                        <h3 class="order__title title--form-subblock">
+                            KOMMENTAR
+                        </h3>
+
+                        <div class="form-field">
+                            <textarea class="form-field__textarea"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="order__client-info-block">
+                        <h3 class="order__title title--form-subblock">
+                            COUPON EINLÖSEN
+                        </h3>
+
+                        <form class="order__client-info-coupon-form">
+                            <input type="text" placeholder="Coupon-Code" required class="form-field__input order__client-info-coupon-input">
+
+                            <button class="btn">
+                                Aktionscoupon einlösen
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

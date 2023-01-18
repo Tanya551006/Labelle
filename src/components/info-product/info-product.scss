@@ -137,4 +137,26 @@
     &__stars-count {
         margin-left: 20px;
     }
+
+    &__attributes-value {
+        display: flex;
+    }
+
+    &__attributes-size {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $primaryColor;
+        transition: .3s ease;
+        padding: 2px 14px;
+        color: $whiteColor;
+        font-size: 12px;
+
+        &:hover {
+            opacity: .7;
+        }
+        &:not(:first-child) {
+            margin-left: 5px;
+        }
+    }
 }

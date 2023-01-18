@@ -40,6 +40,10 @@ body {
 	margin-bottom: 30px;
 }
 
+.mb-45 {
+	margin-bottom: 45px;
+}
+
 p {
 	margin: 0;
 }
@@ -191,10 +195,9 @@ h3 {
 
 .title {
 	font-size: 56px;
-	margin: 0 0 45px;
 	line-height: 1.1em;
 	text-align: center;
-
+	
 	&--goods {
 		text-transform: uppercase;
 	}
@@ -245,8 +248,6 @@ h3 {
 
 	&--form-subblock {
 		font-size: 22px;
-		text-transform: uppercase;
-		margin-bottom: 30px;
 	}
 }
 

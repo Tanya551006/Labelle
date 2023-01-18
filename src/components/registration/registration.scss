@@ -14,6 +14,7 @@
         display: grid;
         column-gap: 20px;
         row-gap: 20px;
+        width: 100%;
 
         &--half {
             grid-template-columns: 1fr 1fr;
@@ -58,6 +59,10 @@
         font-size: 20px;
     }
 
+    &__width-btn {
+        width: 100%;
+    }
+
     &__form-footer {
         display: flex;
         flex-direction: column;
@@ -68,5 +73,63 @@
         }
     }
 
+    &__checkbox-input {
+        appearance: auto;
+        margin-right: 5px;
 
+        &:checked {
+            & ~ .registration {
+                &__hide-form-block {
+                    display: grid;
+
+                    &--reverse {
+                        display: none;
+                    }
+                }            
+            }
+        }
+
+        &:not(:checked) {
+            & ~ .registration {
+                &__hide-form-block {
+                    display: none;
+
+                    &--reverse {
+                        display: grid;
+                    }
+                }            
+            }
+        }
+    }
+
+    &__checkbox-label {
+        max-width: calc(100% - 20px);
+    }
+
+    &__hide-form-block {
+        width: 100%;
+    }
+
+    &__form-item {
+        &--radio {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 0px;
+        }
+    }
+    
+    &__form-subtitle {
+        color: $formTitleColor;
+    }
+
+    &__password-forgotten {
+        display: flex;
+        margin-bottom: 20px;
+        margin-top: -15px;
+        svg {
+            margin-right: 5px;
+            fill: $primaryColor;
+        }
+        
+    }
 }

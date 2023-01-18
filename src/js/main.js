@@ -11,4 +11,5 @@
 //=include '../components/spec-offer/spec-offer.js'
 //=include '../components/product-view/product-view.js'
 //=include '../components/info-product/info-product.js'
+//=include '../components/order/order.js'
 //=include '../components/basket-form/basket-form.js'
