@@ -33,11 +33,11 @@ body {
 }
 
 .mb-20 {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .mb-30 {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 p {
@@ -77,14 +77,14 @@ h3 {
 		padding: 0 20px;
 	}
 
-    &--goods {
-        max-width: 1580px;
-        padding: 0 50px;
+	&--goods {
+		max-width: 1580px;
+		padding: 0 50px;
 
-        @media (max-width: 1200px) {
-            padding: 0 20px;
-        }
-    }
+		@media (max-width: 1200px) {
+			padding: 0 20px;
+		}
+	}
 
 	&--header {
 		max-width: 1780px;
@@ -123,7 +123,7 @@ h3 {
 
 .section-block {
 	padding: 50px 0;
-	
+
 	@media (max-width: 768px) {
 		padding: 30px 0;
 	}
@@ -182,9 +182,9 @@ h3 {
 		}
 	}
 
-    &--large {
-        font-size: 20px;
-    }
+	&--large {
+		font-size: 20px;
+	}
 }
 
 
@@ -220,8 +220,8 @@ h3 {
 		}
 	}
 
-    &--info {
-        font-size: 66px;
+	&--info {
+		font-size: 66px;
 		color: $titleColor;
 		text-align: center;
 		margin-bottom: 60px;
@@ -233,15 +233,21 @@ h3 {
 		@media (max-width: 767px) {
 			font-size: 34px;
 		}
-    }
+	}
 
-    &--form {
-        font-size: 44px;
+	&--form {
+		font-size: 44px;
 
 		@media (max-width: 768px) {
 			font-size: 34px;
 		}
-    }
+	}
+
+	&--form-subblock {
+		font-size: 22px;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
 }
 
 .text-link {
@@ -274,4 +280,3 @@ h3 {
 		text-decoration: underline;
 	}
 }
-

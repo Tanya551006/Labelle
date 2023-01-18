@@ -5,6 +5,12 @@
 @import "settings/_vars";
 @import "settings/_common";
 
+// elements
+@import 'elements/card';
+@import 'elements/warn';
+@import 'elements/form';
+@import 'elements/pagination';
+
 // components
 @import '../components/header/header';
 @import '../components/offer/offer';
@@ -22,10 +28,5 @@
 @import '../components/info-product/info-product';
 @import '../components/info-page/info-page';
 @import '../components/basket-form/basket-form';
+@import '../components/order/order';
 @import '../components/footer/footer';
-
-// elements
-@import 'elements/card';
-@import 'elements/warn';
-@import 'elements/form';
-@import 'elements/pagination';
