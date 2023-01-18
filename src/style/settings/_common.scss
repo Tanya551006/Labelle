@@ -225,6 +225,14 @@ h3 {
 		color: $titleColor;
 		text-align: center;
 		margin-bottom: 60px;
+
+		@media (max-width: 1199px) {
+			font-size: 44px;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 34px;
+		}
     }
 
     &--form {
@@ -238,6 +246,27 @@ h3 {
 
 .text-link {
 	color: $linkColor;
+
+	&:hover {
+		transition: opacity .3s ease-in-out;
+		opacity: .7;
+		text-decoration: underline;
+	}
+}
+
+.text-violet-link {
+	color: $primaryColor;
+
+	&:hover {
+		transition: opacity .3s ease-in-out;
+		opacity: .7;
+		text-decoration: underline;
+	}
+}
+
+.bold-link {
+	font-weight: 700;
+	color: $boldLinkColor;
 
 	&:hover {
 		transition: opacity .3s ease-in-out;

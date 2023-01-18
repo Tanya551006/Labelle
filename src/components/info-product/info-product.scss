@@ -86,21 +86,6 @@
 
     }
 
-    &__attributes-value {
-
-        &--underline {
-            text-decoration: underline;
-        }
-        a {
-            color: $primaryColor;
-
-            &:hover {
-                transition: opacity .3s ease-in-out;
-                opacity: .7;
-            }
-        }
-    }
-
     &__tabs {
         display: flex;
         margin-bottom: 65px;
