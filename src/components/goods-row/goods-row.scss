@@ -1,6 +1,8 @@
 .goods-row {
     &__catalogue {
-        display: flex;
+        display: flex; 
+        padding: 20px ;
+        border-bottom: 1px solid $formSeparatorColor;
     }
 
     &__wrap {
@@ -25,7 +27,7 @@
 
 
     &__title {
-
+        margin-bottom: 45px;
         a {
             font-size: 24px;
             color: $defaultFontColor ;

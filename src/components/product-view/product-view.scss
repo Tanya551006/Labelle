@@ -411,6 +411,14 @@
         display: flex;
         align-items: center;
 
+        &--green {
+            color: $greenColor;
+
+            svg {
+                fill: $greenColor;
+            }
+        }
+
         &--hint {
             cursor: pointer;
             position: relative;
